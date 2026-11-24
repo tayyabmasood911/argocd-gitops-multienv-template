@@ -17,7 +17,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/T9113/argocd-gitops-multienv-template.git
+        repoURL: https://github.com/tayyabmasood911/argocd-gitops-multienv-template.git
         targetRevision: HEAD
         path: 'environments/{{env}}'
       destination:

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="640" fill="#ffffff"/>
+
+  <!-- Top Title Bar -->
+  <rect x="40" y="24" width="1120" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="70" y="60" fill="#0f172a" font-size="20" font-weight="700" letter-spacing="0.3">Argo CD GitOps Multi-Environment Continuous Delivery Architecture</text>
+  <rect x="800" y="40" width="110" height="26" rx="13" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="815" y="58" fill="#047857" font-size="12" font-weight="600">GITOPS v2</text>
+  <rect x="920" y="40" width="100" height="26" rx="13" fill="#fff7ed" stroke="#f97316" stroke-width="1"/>
+  <text x="938" y="58" fill="#c2410c" font-size="12" font-weight="600">ARGOCD</text>
+  <rect x="1030" y="40" width="110" height="26" rx="13" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="1042" y="58" fill="#1d4ed8" font-size="12" font-weight="600">MULTI-CLUSTER</text>
+
+  <!-- COLUMN 1: Git Declarative State -->
+  <rect x="40" y="110" width="350" height="490" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="40" y="110" width="350" height="40" rx="8" fill="#f1f5f9"/>
+  <text x="60" y="136" fill="#0284c7" font-size="13" font-weight="700">1. DECLARATIVE GIT REPOSITORY</text>
+
+  <rect x="60" y="170" width="310" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="198" fill="#0f172a" font-size="14" font-weight="600">Git Repository (Single Source of Truth)</text>
+  <text x="75" y="222" fill="#475569" font-size="11">• Target revision pinned to `HEAD` / protected branch</text>
+  <text x="75" y="242" fill="#64748b" font-size="11">• Signed GPG commits &amp; strict PR review approvals</text>
+
+  <rect x="60" y="275" width="310" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="303" fill="#0f172a" font-size="14" font-weight="600">Multi-Environment Kustomize / Helm</text>
+  <text x="75" y="327" fill="#475569" font-size="11">• `environments/staging`: rapid iteration &amp; integration</text>
+  <text x="75" y="347" fill="#64748b" font-size="11">• `environments/production`: high-resilience values &amp; limits</text>
+
+  <rect x="60" y="380" width="310" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="408" fill="#0f172a" font-size="14" font-weight="600">Argo CD ApplicationSet Controller</text>
+  <text x="75" y="432" fill="#475569" font-size="11">• List generator dynamic matrix for staging &amp; prod</text>
+  <text x="75" y="452" fill="#64748b" font-size="11">• Zero manual application manifest boilerplate</text>
+
+  <rect x="60" y="485" width="310" height="95" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="513" fill="#0f172a" font-size="14" font-weight="600">CI/CD Pre-Commit &amp; Linter Gates</text>
+  <text x="75" y="537" fill="#475569" font-size="11">• Kubeconform &amp; Helm template syntax validation</text>
+  <text x="75" y="557" fill="#64748b" font-size="11">• Checkov / Trivy policy-as-code security screening</text>
+
+  <!-- COLUMN 2: Argo CD Core Reconciliation Engine -->
+  <rect x="420" y="110" width="380" height="490" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="420" y="110" width="380" height="40" rx="8" fill="#f1f5f9"/>
+  <text x="440" y="136" fill="#ea580c" font-size="13" font-weight="700">2. ARGOCD RECONCILIATION ENGINE</text>
+
+  <rect x="440" y="170" width="340" height="120" rx="6" fill="#f8fafc" stroke="#fed7aa" stroke-width="1"/>
+  <text x="455" y="198" fill="#c2410c" font-size="13" font-weight="600">Continuous Drift Detection &amp; Diff Engine</text>
+  <text x="455" y="224" fill="#475569" font-size="11">• Real-time loop: Git Desired State vs Live K8s State</text>
+  <text x="455" y="244" fill="#475569" font-size="11">• Out-of-sync alert triggering on manual kubectl changes</text>
+  <text x="455" y="264" fill="#64748b" font-size="10">• Granular resource exclusion for dynamic fields (HPA/replicas)</text>
+
+  <rect x="440" y="305" width="340" height="135" rx="6" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="455" y="333" fill="#1d4ed8" font-size="13" font-weight="600">Automated Sync &amp; Self-Healing Policy</text>
+  <text x="455" y="359" fill="#475569" font-size="11">• `syncPolicy.automated.prune: true` (auto-delete orphans)</text>
+  <text x="455" y="379" fill="#475569" font-size="11">• `syncPolicy.automated.selfHeal: true` (overwrite manual drift)</text>
+  <text x="455" y="399" fill="#475569" font-size="11">• Sync wave ordering &amp; atomic health phase validation</text>
+  <text x="455" y="419" fill="#64748b" font-size="10">• Retry backoff limits prevent thundering herd on transient errors</text>
+
+  <rect x="440" y="455" width="340" height="125" rx="6" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="455" y="483" fill="#4338ca" font-size="13" font-weight="600">Zero-Trust RBAC &amp; Multi-Tenant Security</text>
+  <text x="455" y="509" fill="#475569" font-size="11">• OIDC SSO authentication via GitHub / Okta / Dex</text>
+  <text x="455" y="529" fill="#475569" font-size="11">• Scoped AppProjects restrict target clusters and namespaces</text>
+  <text x="455" y="549" fill="#64748b" font-size="10">• HashiCorp Vault / Sealed Secrets for zero committed secrets</text>
+
+  <!-- COLUMN 3: Multi-Cluster Target Workloads -->
+  <rect x="830" y="110" width="330" height="490" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="830" y="110" width="330" height="40" rx="8" fill="#f1f5f9"/>
+  <text x="850" y="136" fill="#059669" font-size="13" font-weight="700">3. MULTI-CLUSTER DESTINATIONS</text>
+
+  <rect x="850" y="170" width="290" height="110" rx="6" fill="#f8fafc" stroke="#bae6fd" stroke-width="1"/>
+  <text x="865" y="198" fill="#0284c7" font-size="14" font-weight="600">Staging Cluster (in-cluster)</text>
+  <text x="865" y="222" fill="#475569" font-size="11">• Destination: `https://kubernetes.default.svc`</text>
+  <text x="865" y="242" fill="#475569" font-size="11">• Target namespace: `staging`</text>
+  <text x="865" y="262" fill="#64748b" font-size="10">• Automated integration validation before promotion</text>
+
+  <rect x="850" y="295" width="290" height="145" rx="6" fill="#f8fafc" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="865" y="323" fill="#065f46" font-size="14" font-weight="600">Production Cluster (prod-cluster)</text>
+  <text x="865" y="347" fill="#475569" font-size="11">• Isolated production VPC &amp; high-availability EKS</text>
+  <text x="865" y="367" fill="#475569" font-size="11">• Multi-AZ Pod Anti-Affinity &amp; PDB protection</text>
+  <text x="865" y="387" fill="#475569" font-size="11">• HPA dynamic autoscaling with CPU/Memory metrics</text>
+  <text x="865" y="407" fill="#64748b" font-size="10">• Zero-downtime rolling updates &amp; canary rollouts</text>
+
+  <rect x="850" y="455" width="290" height="125" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="865" y="483" fill="#0f172a" font-size="14" font-weight="600">Observability &amp; Notifications</text>
+  <text x="865" y="509" fill="#475569" font-size="11">• Prometheus metrics: `argocd_app_sync_total`</text>
+  <text x="865" y="529" fill="#475569" font-size="11">• Real-time Slack notifications on sync status</text>
+  <text x="865" y="549" fill="#64748b" font-size="10">• Grafana GitOps dashboard for lead time &amp; MTTR</text>
+
+  <!-- Connectors -->
+  <line x1="390" y1="355" x2="420" y2="355" stroke="#0284c7" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="800" y1="355" x2="830" y2="355" stroke="#ea580c" stroke-width="2" stroke-dasharray="4"/>
+</svg>
